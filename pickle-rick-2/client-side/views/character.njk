@@ -1,0 +1,11 @@
+{% extends "parent.njk" %}
+{% block character %}
+<div style="display:flex; flex-direction: column; align-items: center; gap: 5px;">
+        <img src="{{ character.image }}" alt="{{ character.image }}" title="{{ character.image }}" style="">
+<p style="margin: 5px">Status: {{character.status}}</p>
+<p style="margin: 5px">Species: {{character.species}}</p>
+<p style="margin: 5px">Type: {{character.type}}</p>
+<p style="margin: 5px">Gender: {{character.gender}}</p>
+<a href="/characters"><button style="background-color: blue; color: white; padding: 10px; border: none; border-radius: 5px;">Back to Home</button></a>
+</div>
+{% endblock %}

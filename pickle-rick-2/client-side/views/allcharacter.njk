@@ -1,0 +1,18 @@
+{% extends "parent.njk" %}
+{% block characters %}
+<div style="display: grid; grid-template-columns: 1fr 1fr;">
+    {% for character in characters %}
+    <div style="display: flex; flex-direction: column; align-items: center;" class="image-wrap">
+    <a href="/character/{{character.id}} ">
+    <div style="">
+        <img src="{{ character.image }}" alt="{{ character.image }}"" id="{{ character.id}} "title="{{ character.image }}"  class="character-image"">
+          <p style="  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); text-align: center" class="character-name">{{character.name}}</p>
+        </div>
+    </a>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}
